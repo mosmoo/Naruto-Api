@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import chalk from "chalk";
 
-let MONGODB_URI = process.env.PROD_MONGODB || "mongodb://127.0.0.1:27017/test"
+let MONGODB_URI = process.env.PROD_MONGODB || "mongodb://127.0.0.1:27017/naruto-api"
 
 mongoose.set("returnOriginal", false);
 //Always returns the new updated data.
