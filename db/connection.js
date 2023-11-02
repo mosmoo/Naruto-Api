@@ -1,10 +1,12 @@
 import mongoose from "mongoose";
 import chalk from "chalk";
 
+let MONGODB_URI = process.env.PROD_MONGODB || "mongodb://127.0.0.1:27017/test"
+
 mongoose.set("returnOriginal", false);
 //Always returns the new updated data.
 
-mongoose.connect("mongodb://127.0.0.1:27017/test").catch((err) => {
+mongoose.connect(MONGODB_URI).catch((err) => {
   console.log(`Error connection go MongoDB: ${err.message}`);
 });
 //Establish Connection
