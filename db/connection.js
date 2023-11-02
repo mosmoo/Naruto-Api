@@ -4,11 +4,10 @@ import chalk from "chalk";
 mongoose.set("returnOriginal", false);
 //Always returns the new updated data.
 
-mongoose.connect("mongodb://127.0.0.1:27017/potted-nighthawks").catch((err) => {
+mongoose.connect("mongodb://127.0.0.1:27017/test").catch((err) => {
   console.log(`Error connection go MongoDB: ${err.message}`);
 });
 //Establish Connection
-
 
 mongoose.connection.on("disconnected", () => {
   console.log(chalk.bold("Disconnected from MongoDB!!"));
